@@ -11,6 +11,7 @@ class ResultsListItem extends Component {
 
 	handleButtonClick() {
 		const newArticle = this.props.article;
+		console.log(this.props.article)
 		API.saveArticle(newArticle).then(this.props.getArticles);
 	}
 

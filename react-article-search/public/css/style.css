@@ -56,19 +56,19 @@ p .read-article {
 .card {
 	margin: 1rem;
 	padding: 1rem;
-	background-image: url("../images/wood2.jpg");
+	background-color: rgb(224, 192, 161);
 	background-position: center center;
 	background-size: cover;
-	border-radius: 0;
+	border-radius: 5px;
 }
 
 .card-block {
 	margin: 1rem;
 	padding: 1rem;
-	background-image: url("../images/paper.jpg");
+	background-color: rgb(205, 230, 207);
 	background-position: center center;
 	background-size: cover;
-	border-radius: 0;
+	border-radius: 5px;
 }
 
 .btn, .btn:focus {
