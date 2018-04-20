@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/build"));
 
-var db = process.env.MONGODB_URI || "mongodb://localhost/nyt-react";
+var db = process.env.MONGODB_URI || "mongodb://localhost/react-article-search";
 
 // Connect mongoose to our database
 mongoose.connect(db, function(error) {
@@ -27,6 +27,11 @@ mongoose.connect(db, function(error) {
     console.log("mongoose connection is successful");
   }
 });
+
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+// mongoose.Promise = Promise;
+// mongoose.connect(MONGODB_URI);
 
 // enable CORS
 app.use((req, res, next) => {
@@ -45,6 +50,6 @@ app.get("/api/articles", apiController.index);
 app.delete("/api/articles/:id", apiController.destroy);
 
 // Start the server
-app.listen(PORT, function() {
-  console.log("Now listening on port %s! Visit localhost:%s in your browser.", PORT, PORT);
+app.listen(PORT, function () {
+  console.log("App running on port " + PORT + "!");
 });
